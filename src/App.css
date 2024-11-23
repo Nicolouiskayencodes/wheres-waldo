@@ -4,6 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+#game-container{ 
+  display: flex;
+}
+#search-list{
+  visibility:hidden;
+}
+#search-list>ul{
+  list-style: none;
+}
 
 #imagebox {
   max-height: 80vw;
