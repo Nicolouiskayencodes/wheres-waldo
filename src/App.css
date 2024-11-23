@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.imagebox {
+  height: auto;
+}
+
+@media (max-width: 1300px) {
+  .imagebox {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .imagebox {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .imagebox {
+    width: 400px;
+  }
+}
