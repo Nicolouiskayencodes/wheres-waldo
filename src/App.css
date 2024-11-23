@@ -6,8 +6,8 @@
 }
 
 #imagebox {
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 80vw;
+  max-width: 80vw;
   -webkit-user-drag: none;
 }
 #selectbox {
@@ -21,4 +21,5 @@
   padding: 0;
   border: none;
   outline: none;
+  width: auto;
 }
