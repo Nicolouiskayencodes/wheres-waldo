@@ -10,9 +10,14 @@ function App() {
   document.addEventListener('click', (event)=>{
     const imagebox = document.querySelector('#imagebox')
     const selectbox = document.querySelector('#selectbox')
-    if (!(event.target === imagebox)){
+    const searchList = document.querySelector('#search-list');
+    if ((event.target !== imagebox)){
       selectbox.style.display = 'none'
+      if (event.target !== searchList){
+      searchList.style.visibility = 'hidden'
     }
+    }
+    
   })
 
   function captureCoordinates(event) {
@@ -45,12 +50,10 @@ function App() {
         <img id='imagebox' src={avengers} ></img>
       </button>
       <div id='search-list'>
-        <ul>
-          <li><button onClick={nameSelect} value='thanos'>Thanos</button></li>
-          <li><button onClick={nameSelect} className='names' value='hulk'>Hulk</button></li>
-          <li><button onClick={nameSelect} className='names' value='ironman'>Ironman</button></li>
-          <li><button onClick={nameSelect} className='names' value='spiderman'>Spiderman</button></li>
-        </ul>
+        <button onClick={nameSelect} className='names' value='thanos'>Thanos</button>
+        <button onClick={nameSelect} className='names' value='hulk'>Hulk</button>
+        <button onClick={nameSelect} className='names' value='ironman'>Ironman</button>
+        <button onClick={nameSelect} className='names' value='spiderman'>Spiderman</button>
       </div>
     </div>
   )

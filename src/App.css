@@ -1,17 +1,19 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5vw;
   text-align: center;
 }
 #game-container{ 
   display: flex;
+  max-width: 90vw;
 }
 #search-list{
   visibility:hidden;
-}
-#search-list>ul{
-  list-style: none;
+  max-width: 15vw;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
 }
 
 #imagebox {
@@ -31,4 +33,16 @@
   border: none;
   outline: none;
   width: auto;
+}
+@media(max-width: 800px) {
+  #root{
+    margin: 0;
+  }
+  #search-list{
+  max-width: 20vw;
+  }
+  .names {
+    font-size: 12px;
+    padding: 5px;
+  }
 }
