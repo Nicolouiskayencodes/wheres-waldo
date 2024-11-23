@@ -5,24 +5,24 @@
   text-align: center;
 }
 
-.imagebox {
+#imagebox {
   height: auto;
 }
 
 @media (max-width: 1300px) {
-  .imagebox {
+  #imagebox {
     width: 1000px;
   }
 }
 
 @media (max-width: 1050px) {
-  .imagebox {
+  #imagebox {
     width: 600px;
   }
 }
 
 @media (max-width: 650px) {
-  .imagebox {
+  #imagebox {
     width: 400px;
   }
 }
