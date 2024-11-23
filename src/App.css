@@ -6,23 +6,19 @@
 }
 
 #imagebox {
-  height: auto;
+  max-height: 80%;
+  max-width: 80%;
+  -webkit-user-drag: none;
+}
+#selectbox {
+  position: absolute;
+  display: none;
 }
 
-@media (max-width: 1300px) {
-  #imagebox {
-    width: 1000px;
-  }
-}
-
-@media (max-width: 1050px) {
-  #imagebox {
-    width: 600px;
-  }
-}
-
-@media (max-width: 650px) {
-  #imagebox {
-    width: 400px;
-  }
+#imagebutton,
+#imagebutton:hover,
+#imagebutton:active {
+  padding: 0;
+  border: none;
+  outline: none;
 }
