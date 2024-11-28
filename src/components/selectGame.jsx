@@ -45,15 +45,15 @@ export default function SelectGame({imageId}) {
     const selectbox = document.querySelector('#selectbox');
     const searchList = document.querySelector('#search-list');
     const imageOffset = imagebox.getBoundingClientRect();
-    const x = Math.round((event.pageX-imageOffset.left)*1280/imagebox.width);
-    const y = Math.round((event.pageY-imageOffset.top)*853/imagebox.height);
+    const x = Math.round((event.pageX-imageOffset.left)*canvas.width/imagebox.width);
+    const y = Math.round((event.pageY-imageOffset.top)*canvas.height/imagebox.height);
     setClickLeft(event.pageX)
     setClickTop(event.pageY)
     setXCoord(x)
     setYCoord(y)
     selectbox.style.left = event.pageX-(selectbox.width/2) + 'px';
     selectbox.style.top = event.pageY-(selectbox.height/2) + 'px';
-    selectbox.style.transform = `scale(${imageOffset.width/1280})`;
+    selectbox.style.transform = `scale(${imageOffset.width/canvas.width})`;
     selectbox.style.display = 'block';
     searchList.style.visibility = 'visible';
   }
