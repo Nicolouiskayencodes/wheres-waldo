@@ -10,7 +10,7 @@
 }
 #search-list{
   visibility:hidden;
-  max-width: 15vw;
+  width: 15vw;
   display: flex;
   flex-direction: column;
   height: max-content;
@@ -45,4 +45,15 @@
     font-size: 12px;
     padding: 5px;
   }
+}
+.names::first-letter{
+  text-transform: capitalize;
+}
+.found {
+  position: absolute;
+  background-color: lawngreen;
+  margin: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
 }
