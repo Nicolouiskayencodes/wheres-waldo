@@ -17,7 +17,7 @@
 }
 
 #imagebox {
-  max-height: 80vw;
+  max-height: 80vh;
   max-width: 80vw;
   -webkit-user-drag: none;
 }
@@ -49,6 +49,13 @@
 .names::first-letter{
   text-transform: capitalize;
 }
+.othernames{
+  display: inline-block;
+  margin-right: 1rem;
+}
+.othernames::first-letter{
+  text-transform: capitalize;
+}
 .found {
   position: absolute;
   background-color: lawngreen;
@@ -56,4 +63,8 @@
   height: 10px;
   width: 10px;
   border-radius: 5px;
+}
+.image-link{
+  max-height: 250px;
+  max-width: 250px;
 }

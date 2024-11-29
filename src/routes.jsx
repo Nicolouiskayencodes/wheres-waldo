@@ -1,4 +1,5 @@
 import App from "./App";
+import SelectGame from "./components/selectGame";
 import ErrorPage from "./components/errorPage";
 
 const routes = [
@@ -9,7 +10,7 @@ const routes = [
   },
   {
     path: "/:page",
-    element: <App />,
+    element: <SelectGame />,
   }, 
 ];
 

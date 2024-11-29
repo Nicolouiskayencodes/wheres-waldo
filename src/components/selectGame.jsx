@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link, useParams } from "react-router"
 import selectBoxSVG from '../assets/selectBox.svg';
-import PropTypes from 'prop-types';
 
-export default function SelectGame({imageId}) {
+export default function SelectGame() {
+  const imageId = useParams().page
   const [xCoord, setXCoord] = useState(null)
   const [yCoord, setYCoord] = useState(null)
   const [canvas, setCanvas] = useState(null)
@@ -104,6 +105,7 @@ export default function SelectGame({imageId}) {
 
   return (
     (gameId && gameId.completionTime !== null) ? (<>
+    <Link to='/'>Select a new image</Link>
     {(gameId.name === null) &&
       <dialog id='name-prompt' open>
         <p>Completed in {gameId.completionTime/1000} seconds</p>
@@ -137,6 +139,7 @@ export default function SelectGame({imageId}) {
       </>}
     </>) : (
     (canvas) ? (
+      <>
       <div id='game-container'>
       <button id='imagebutton' onClick={captureCoordinates}>
         <img src={selectBoxSVG} id='selectbox' ></img>
@@ -151,13 +154,11 @@ export default function SelectGame({imageId}) {
         )}
       </div>
     </div>
+    <div>To Find:  {canvas.characters.map(character => <span key={character.name} className='othernames'>{character.name} </span>)}</div>
+    </>
      ) : (
       <p>Loading...</p>
      )
   )
 )
-}
-
-SelectGame.propTypes = {
-  imageId: PropTypes.number
 }
