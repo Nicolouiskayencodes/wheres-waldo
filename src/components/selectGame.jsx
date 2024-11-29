@@ -21,7 +21,6 @@ export default function SelectGame() {
       return response.json()
     })
     .then(response=>{
-      console.log(response)
       setCanvas(response.image)
       setGameId(response.score)
     })
