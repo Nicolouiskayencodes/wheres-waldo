@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   height: max-content;
+  gap: 10px;
 }
 
 #imagebox {
@@ -37,14 +38,18 @@
 @media(max-width: 800px) {
   #root{
     margin: 0;
+    padding-right: 10px;
   }
   #search-list{
   max-width: 20vw;
   }
   .names {
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px;
   }
+ #search-list{
+  width: 100%;
+ }
 }
 .names::first-letter{
   text-transform: capitalize;
@@ -67,4 +72,23 @@
 .image-link{
   max-height: 250px;
   max-width: 250px;
+}
+button{
+  border: 1px solid white;
+}
+@media (prefers-color-scheme: light) {
+  button{
+    border: 1px solid black;
+  }
+}
+#skip{
+  margin: 10px;
+}
+#add-name{
+  margin: 10px;
+}
+th {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
