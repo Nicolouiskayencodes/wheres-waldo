@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useParams } from "react-router"
-import selectBoxSVG from '../assets/selectBox.svg';
+import selectBoxSVG from './../assets/selectBox.svg';
 
 export default function SelectGame() {
   const imageId = useParams().page
