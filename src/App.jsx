@@ -6,7 +6,7 @@ function App() {
   const [images, setImages] = useState(null)
 
   useEffect(() => {
-    fetch(`http://localhost:3000/`, {mode: 'cors', method:"GET", headers:{
+    fetch(`https://wheres-waldo-backend-gpoc.onrender.com/`, {mode: 'cors', method:"GET", headers:{
       "Content-Type": "application/json"
     }})
     .then(response=>{

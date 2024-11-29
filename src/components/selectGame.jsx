@@ -14,7 +14,7 @@ export default function SelectGame() {
   const scoreName = useRef(null)
 
   useEffect(() => {
-    fetch(`http://localhost:3000/image/${imageId}`, {mode: 'cors', method:"POST", headers:{
+    fetch(`https://wheres-waldo-backend-gpoc.onrender.com/image/${imageId}`, {mode: 'cors', method:"POST", headers:{
       "Content-Type": "application/json"
     }})
     .then(response=>{
@@ -61,7 +61,7 @@ export default function SelectGame() {
   async function nameSelect(event){
     const searchList = document.querySelector('#search-list');
     searchList.style.visibility = 'hidden';
-    await fetch(`http://localhost:3000/${imageId}/guess/${gameId.id}`, {mode: 'cors', method:"POST", headers: {
+    await fetch(`https://wheres-waldo-backend-gpoc.onrender.com/${imageId}/guess/${gameId.id}`, {mode: 'cors', method:"POST", headers: {
       "Content-Type": "application/json",
   },
     body: JSON.stringify({
@@ -86,7 +86,7 @@ export default function SelectGame() {
     dialog.close()
   }
   function addName() {
-    fetch(`http://localhost:3000/name/${gameId.id}`, {mode:'cors', method:"PUT", headers: {
+    fetch(`https://wheres-waldo-backend-gpoc.onrender.com/name/${gameId.id}`, {mode:'cors', method:"PUT", headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
